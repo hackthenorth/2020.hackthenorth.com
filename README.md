@@ -24,6 +24,10 @@ $ npm start
 
 Navigate to `localhost:3000` in your browser and give it a look 👀
 
+### Contributing
+
+This is a modified copy of the actual 2020.hackthenorth.com repo and is not actively maintained. For that reason, contributions are not welcome at this time.
+
 ### Tech stack
 
 - [React](https://reactjs.org/)
