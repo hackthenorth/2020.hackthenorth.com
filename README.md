@@ -11,8 +11,8 @@
 First, clone the repo
 
 ```
-$ git clone https://github.com/hackathon/hackthenorth.com.git
-$ cd hackthenorth.com
+$ git clone https://github.com/hackthenorth/2020.hackthenorth.com.git
+$ cd 2020.hackthenorth.com
 ```
 
 Then install dependencies and get it running
