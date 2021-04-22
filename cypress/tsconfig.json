@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../build/dist/cypress",
+    "types": ["cypress", "@percy/cypress"],
+    "isolatedModules": false,
+  },
+  "include": ["**/*.ts"]
+}

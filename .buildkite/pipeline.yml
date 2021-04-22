@@ -1,0 +1,33 @@
+steps:
+  - label: "Install"
+    commands:
+      - "source use-node 14.5.0"
+      - "npm ci"
+      - "tar -czf node_modules.tar node_modules"
+    if: !build.pull_request.draft
+    artifact_paths: "node_modules.tar"
+
+  - wait
+
+  - label: "Lint"
+    commands:
+      - "source use-node 14.5.0"
+      - "buildkite-agent artifact download node_modules.tar . && tar -xzf node_modules.tar"
+      - "npm run lint"
+    if: !build.pull_request.draft
+
+  - label: "Build"
+    commands:
+      - "source use-node 14.5.0"
+      - "buildkite-agent artifact download node_modules.tar . && tar -xzf node_modules.tar"
+      - "npm run build"
+    if: !build.pull_request.draft
+
+  - wait
+
+  - label: "Release and bump version"
+    commands:
+      - "source use-node 14.5.0"
+      - "buildkite-agent artifact download node_modules.tar . && tar -xzf node_modules.tar"
+      - ".ci/release.sh"
+    branches: "*.*"

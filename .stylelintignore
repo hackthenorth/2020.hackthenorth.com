@@ -1,0 +1,17 @@
+*.svg
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+
+*.txt 
+
+*.ttf
+*.otf
+*.eot
+*.woff
+*.woff2
+
+*.json

@@ -1,0 +1,25 @@
+# dependencies
+/node_modules
+
+# testing
+/coverage
+/cypress/screenshots
+
+# production build artifacts
+/build
+
+# misc
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+
+# vscode extensions
+.vscode/snipsnap.code-snippets
+
+# IDE
+.idea/
